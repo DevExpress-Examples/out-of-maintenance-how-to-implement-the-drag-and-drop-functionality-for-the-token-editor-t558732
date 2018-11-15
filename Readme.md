@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[DragDropBehavior.cs](./CS/T558732/DragDropBehavior.cs) (VB: [DragDropBehavior.vb](./VB/T558732/DragDropBehavior.vb))**
+* [MainWindow.xaml](./CS/T558732/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/T558732/MainWindow.xaml))
+<!-- default file list end -->
 # How to implement the drag and drop functionality for the Token Editor
 
 
