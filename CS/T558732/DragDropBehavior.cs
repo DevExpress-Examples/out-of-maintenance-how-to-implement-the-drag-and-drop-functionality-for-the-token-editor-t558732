@@ -43,7 +43,7 @@ namespace T558732 {
                 if (ownerEdit.EditValue is List<object>)
                     InsertValue(item.EditValue, GetDropTarget(e));
                 else
-                    ownerEdit.EditValue = new List<object>() { item.EditValue };
+                    ownerEdit.SetCurrentValue(BaseEdit.EditValueProperty, new List<object> { item.EditValue });
             }
         }
 
@@ -60,7 +60,7 @@ namespace T558732 {
             var result = new List<object>(editValue);
             result.Remove(value);
             result.Insert(newIndex, value);
-            ownerEdit.EditValue = result;
+            ownerEdit.SetCurrentValue(BaseEdit.EditValueProperty, result);
         }
 
         void RemoveAdorner() {
