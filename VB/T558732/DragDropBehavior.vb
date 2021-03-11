@@ -49,7 +49,7 @@ Namespace T558732
                 If TypeOf ownerEdit.EditValue Is List(Of Object) Then
                     InsertValue(item.EditValue, GetDropTarget(e))
                 Else
-                    ownerEdit.EditValue = New List(Of Object)() From {item.EditValue}
+                    ownerEdit.SetCurrentValue(BaseEdit.EditValueProperty, New List(Of Object)() From {item.EditValue})
                 End If
             End If
         End Sub
@@ -70,7 +70,7 @@ Namespace T558732
             Dim result = New List(Of Object)(editValue)
             result.Remove(value)
             result.Insert(newIndex, value)
-            ownerEdit.EditValue = result
+            ownerEdit.SetCurrentValue(BaseEdit.EditValueProperty, result)
         End Sub
 
         Private Sub RemoveAdorner()
